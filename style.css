@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Playfair+Display" rel="stylesheet">');
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: url(https://picsum.photos/id/1019/1600/800);
+}
+
+header {
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    color: rgb(7, 7, 7);
+    font-weight: 700;
+    margin-top: 40px;
+    margin-left: 550px;
+}
+
+@keyframes turning {
+    0% {
+        border-radius: 0 0 0 0;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 0 0;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        transform: rotate(180deg);
+    }
+}
+
+.box0 {
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(10, 79, 136);
+    animation: turning 4s ease-out 1s infinite alternate;
+    top: 30%;
+    left: 70%;
+}
+
+.box3 {
+    width: 290px;
+    height: 290px;
+    background-color: turquoise;
+    margin: 100px;
+    animation: turning 4s ease-out 1s infinite alternate;
+    top: 30%;
+    left: 30%;
+}
+
+.box3:hover {
+    animation-play-state: paused;
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
